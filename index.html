@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simulacros ICFES IA: plataforma educativa para practicar Saber 11 con diagnóstico, simulacros, resultados y apoyo de IA.">
+  <title>Simulacros ICFES IA</title>
+  <style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#17142a;background:#f7f5fb;line-height:1.55}.topbar{height:76px;background:#fff;border-bottom:1px solid #e8e3f0;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;position:sticky;top:0;z-index:20}.brand{display:flex;gap:10px;align-items:center;text-decoration:none;color:#221d35;font-size:15px;letter-spacing:.4px}.brand-mark{width:34px;height:34px;border-radius:11px;background:#5b2a86;color:#fff;display:grid;place-items:center;font-size:18px}.brand b{color:#6c329c}.topbar nav{display:flex;gap:6px}.topbar nav a{padding:10px 13px;border-radius:10px;text-decoration:none;color:#5c5667;font-size:14px;font-weight:650}.topbar nav a:hover,.topbar nav a.active{background:#f0e8f8;color:#5b2a86}.menu-btn{display:none;border:0;background:none;font-size:25px}.view{display:none;max-width:1180px;margin:auto;padding:64px 6vw 90px}.view.active{display:block}.hero{min-height:590px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}.eyebrow{font-size:12px;font-weight:800;letter-spacing:1.8px;color:#7a3da8}.hero h1{font-size:clamp(42px,5vw,70px);line-height:1.03;letter-spacing:-2.5px;margin:15px 0 22px}.hero h1 span{color:#7138a0}.hero p{max-width:620px;font-size:18px;color:#696273}.hero-actions{display:flex;gap:12px;margin:28px 0}.btn{border:0;border-radius:13px;padding:14px 20px;font-weight:800;font-size:14px;cursor:pointer}.primary{background:#5d2b88;color:#fff;box-shadow:0 10px 25px #5d2b8829}.secondary{background:#ece6f2;color:#54267d}.trust-row{display:flex;flex-wrap:wrap;gap:15px;color:#6f6878;font-size:12px;font-weight:700}.hero-card{height:430px;border-radius:34px;background:linear-gradient(145deg,#241b31,#5c2a87);position:relative;overflow:hidden;display:grid;place-items:center;box-shadow:0 25px 60px #3b1b5d30}.ai-core{width:145px;height:145px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:42px;font-weight:900;border:1px solid #ffffff55;background:#ffffff12;box-shadow:0 0 80px #d9a7ff40;z-index:2}.orbit{position:absolute;border:1px solid #ffffff2c;border-radius:50%}.orbit1{width:300px;height:300px}.orbit2{width:470px;height:470px}.floating-card{position:absolute;background:#fff;color:#282131;border-radius:13px;padding:11px 14px;box-shadow:0 15px 30px #0002;font-size:12px}.floating-card b{display:block;color:#63328d;font-size:16px}.fc1{top:70px;left:35px}.fc2{right:30px;top:165px}.fc3{bottom:62px;left:100px}.stats{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid #e9e4ee;border-radius:20px;padding:22px;margin:20px 0 85px}.stats div{display:flex;flex-direction:column;align-items:center;border-right:1px solid #eee8f2}.stats div:last-child{border:0}.stats strong{font-size:25px;color:#5d2b88}.stats span{font-size:12px;color:#77707e}.section-head{text-align:center;max-width:680px;margin:auto}.section-head h2,.page-title h2{font-size:38px;line-height:1.1;margin:10px 0 12px;letter-spacing:-1px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:35px}.steps article{background:#fff;border:1px solid #e9e4ee;padding:25px;border-radius:18px}.steps b{color:#7b42a2;font-size:12px}.steps h3{margin:12px 0 5px}.steps p,.page-title p{color:#706a77}.page-title{margin-bottom:30px}.quiz-shell{max-width:820px;margin:auto;background:#fff;border:1px solid #e8e1ef;border-radius:22px;padding:30px;box-shadow:0 12px 35px #3b1b5d0b}.quiz-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.quiz-top b{color:#5b2a86}.question{font-size:20px;font-weight:750;color:#25202e}.option{width:100%;text-align:left;border:1px solid #ded7e7;background:#fff;border-radius:12px;padding:15px;margin:8px 0;cursor:pointer;font-size:14px}.option:hover{border-color:#8c58ae;background:#faf7fc}.option.selected{border-color:#5b2a86;background:#f1e9f8}.quiz-actions{display:flex;justify-content:flex-end;margin-top:22px}.hidden{display:none!important}.area-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:24px}.area-card{border:1px solid #e4ddeb;background:#fff;border-radius:18px;padding:22px 14px;cursor:pointer;text-align:left;transition:.2s}.area-card:hover{transform:translateY(-3px);border-color:#8a50ad;box-shadow:0 10px 24px #3b1b5d10}.area-card span{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#f0e7f7;color:#60308b;font-weight:900;margin-bottom:16px}.area-card b,.area-card small{display:block}.area-card small{color:#77707e;margin-top:4px}.results-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:20px}.score-card,.areas-result,.recommendation{background:#fff;border:1px solid #e7e1ed;border-radius:20px;padding:28px}.score-card>span{color:#766e7c;font-size:13px}.score-card strong{display:block;font-size:60px;color:#5b2a86;line-height:1.2}.progress{height:10px;background:#eee8f2;border-radius:10px;overflow:hidden}.progress i{display:block;height:100%;width:0;background:#70409a;border-radius:10px}.area-result{margin-bottom:16px}.area-result-head{display:flex;justify-content:space-between;font-size:13px;font-weight:750}.area-bar{height:8px;background:#eee8f2;border-radius:8px;margin-top:7px;overflow:hidden}.area-bar i{display:block;height:100%;background:#8b5aa8}.recommendation{display:flex;gap:15px;margin-top:20px;background:#f5eff9}.recommendation>span{font-size:28px}.recommendation b{color:#5c2b86}.recommendation p{margin:4px 0;color:#5f5867}.project-nav{display:flex;gap:8px;overflow:auto;margin:25px 0 20px;padding-bottom:4px}.project-tab{border:1px solid #ddd4e7;background:#fff;padding:11px 14px;border-radius:10px;white-space:nowrap;cursor:pointer;font-weight:700;color:#645d6c}.project-tab.active{background:#5b2a86;color:#fff;border-color:#5b2a86}.project-content{background:#fff;border:1px solid #e7e1ed;border-radius:22px;padding:35px;min-height:420px}.project-panel{display:none}.project-panel.active{display:block}.project-panel h3{font-size:26px;margin-top:0;color:#382746}.project-panel h4{color:#5b2a86;margin-top:25px}.project-panel li{margin:9px 0}.callout{padding:16px 18px;background:#f3ebf8;border-left:4px solid #6c3396;border-radius:10px;margin-top:22px}.callout.warning{background:#fff8e8;border-color:#c08a23}.question{background:#f8f5fa;border-radius:12px;padding:17px}.timeline{display:grid;gap:12px}.timeline div{display:grid;grid-template-columns:90px 1fr;gap:15px;padding:13px 0;border-bottom:1px solid #eee9f1}.timeline b{color:#6a3592}.refs li{margin-bottom:14px}.source-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.source-links a{background:#f0e8f7;color:#5b2a86;padding:9px 12px;border-radius:9px;text-decoration:none;font-size:13px;font-weight:700}footer{background:#21182a;color:#ddd3e3;display:flex;justify-content:space-between;gap:20px;padding:28px 6vw;font-size:12px}footer div{display:flex;flex-direction:column;gap:4px}footer b{color:#fff}footer span{opacity:.8}@media(max-width:850px){.topbar{padding:0 5vw}.menu-btn{display:block}.topbar nav{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:12px 5vw;border-bottom:1px solid #eee;flex-direction:column}.topbar nav.open{display:flex}.hero{grid-template-columns:1fr}.hero-card{height:340px}.stats{grid-template-columns:repeat(2,1fr);gap:18px}.stats div:nth-child(2){border:0}.steps{grid-template-columns:1fr 1fr}.area-grid{grid-template-columns:repeat(2,1fr)}.results-layout{grid-template-columns:1fr}footer{flex-direction:column}}@media(max-width:540px){.view{padding:42px 5vw 65px}.hero h1{font-size:43px}.hero-card{height:300px}.stats{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.area-grid{grid-template-columns:1fr}.quiz-shell,.project-content{padding:22px}.timeline div{grid-template-columns:1fr}.floating-card{transform:scale(.85)}}
+
+.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:25px 0 28px}.plan-card{position:relative;background:#fff;border:1px solid #e6dfeb;border-radius:22px;padding:28px;box-shadow:0 12px 30px #3b1b5d0a}.plan-card.featured{border:2px solid #6b3296;transform:translateY(-6px)}.popular{position:absolute;right:18px;top:18px;background:#6b3296;color:#fff;padding:5px 9px;border-radius:8px;font-size:9px;font-weight:900}.plan-icon{font-size:28px}.plan-card h3{font-size:23px;margin:13px 0 0}.plan-price{font-size:31px;font-weight:900;color:#5b2a86;margin:8px 0}.plan-price small{font-size:12px;color:#777;font-weight:600}.plan-card>p:not(.plan-price){color:#6d6674}.plan-card ul{padding:0;list-style:none;line-height:2;color:#55505e;min-height:150px}.plan-card .btn{width:100%}.payment-info{display:flex;justify-content:space-between;align-items:center;gap:25px;background:#f1eaf7;border-radius:20px;padding:25px 28px}.payment-info h3{margin:6px 0}.payment-info p{margin:0;color:#625a6a}.payment-methods{display:flex;flex-wrap:wrap;gap:8px}.payment-methods span{background:#fff;padding:10px 12px;border-radius:10px;font-size:12px;font-weight:800}.modal{position:fixed;inset:0;background:#17121e99;display:grid;place-items:center;z-index:100;padding:20px}.modal-box{position:relative;background:#fff;width:min(470px,100%);border-radius:22px;padding:30px;box-shadow:0 25px 80px #0004}.modal-close{position:absolute;right:18px;top:14px;border:0;background:none;font-size:30px;cursor:pointer;color:#777}.pay-total{font-size:25px;font-weight:900;color:#5b2a86}.payment-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:18px 0}.pay-tab{border:1px solid #ddd4e6;background:#fff;padding:10px 5px;border-radius:9px;cursor:pointer;font-weight:700;font-size:12px}.pay-tab.active{background:#eee5f5;color:#5b2a86;border-color:#8553a5}.modal label{display:block;font-size:12px;font-weight:800;color:#5a5362;margin:12px 0}.modal input{display:block;width:100%;margin-top:6px;border:1px solid #dcd4e5;border-radius:10px;padding:12px;font:inherit}.full{width:100%;margin-top:8px}.payment-note{display:block;margin-top:14px;color:#888;text-align:center}@media(max-width:850px){.plans-grid{grid-template-columns:1fr}.plan-card.featured{transform:none}.payment-info{flex-direction:column;align-items:flex-start}}
+
+.recipient-box{background:#f5eff9;border:1px solid #dfd1e9;border-radius:12px;padding:14px 16px;margin:12px 0 16px;display:flex;justify-content:space-between;align-items:center;gap:10px}.recipient-box span{font-size:12px;color:#665f6e}.recipient-box strong{font-size:18px;color:#5b2a86;letter-spacing:.6px}
+
+.daily-notice{background:#f4edf8;border:1px solid #e0d3e9;color:#5b2a86;border-radius:12px;padding:13px 15px;margin:16px 0;font-size:13px}.daily-notice.limit-reached{background:#fff4e8;border-color:#efd5a9;color:#805b1b}.daily-mini{display:inline-block;margin-top:18px;padding:10px 13px;background:#f3ecf8;border-radius:10px;color:#624071;font-size:12px}
+
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" data-view="inicio">
+      <span class="brand-mark">✦</span>
+      <span>SIMULACROS <b>ICFES IA</b></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+    <nav id="nav">
+      <a href="#inicio" data-view="inicio">Inicio</a>
+      <a href="#diagnostico" data-view="diagnostico">Diagnóstico</a>
+      <a href="#simulacro" data-view="simulacro">Simulacro</a>
+      <a href="#resultados" data-view="resultados">Resultados</a>
+      <a href="#planes" data-view="planes">Planes</a>
+      <a href="#proyecto" data-view="proyecto">Proyecto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="view active">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">PREPARACIÓN INTELIGENTE • SABER 11</span>
+          <h1>Practica hoy.<br><span>Conoce tu nivel.</span><br>Mejora para el ICFES.</h1>
+          <p>Una propuesta de plataforma educativa accesible que combina simulacros, diagnóstico, seguimiento y apoyo de Inteligencia Artificial.</p>
+          <div class="hero-actions">
+            <button class="btn primary" data-view="diagnostico">Empezar diagnóstico →</button>
+            <button class="btn secondary" data-view="simulacro">Ver simulacro</button>
+          </div>
+          <div class="trust-row">
+            <span>✓ Lectura Crítica</span><span>✓ Matemáticas</span><span>✓ Sociales</span><span>✓ Ciencias</span><span>✓ Inglés</span>
+          </div>
+          <div class="daily-mini">🎯 <b>20 preguntas gratis cada día</b> · Las preguntas se renuevan diariamente.</div>
+        </div>
+        <div class="hero-card">
+          <div class="orbit orbit1"></div><div class="orbit orbit2"></div>
+          <div class="ai-core">IA</div>
+          <div class="floating-card fc1">📊 Progreso <b>+18%</b></div>
+          <div class="floating-card fc2">🧠 Nivel <b id="heroLevel">Inicial</b></div>
+          <div class="floating-card fc3">✓ 5 áreas</div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div><strong>5</strong><span>pruebas Saber 11</span></div>
+        <div><strong>24/7</strong><span>práctica desde celular</span></div>
+        <div><strong>IA</strong><span>retroalimentación personalizada</span></div>
+        <div><strong>$0</strong><span>para comenzar</span></div>
+      </div>
+
+      <div class="section-head">
+        <span class="eyebrow">¿CÓMO FUNCIONA?</span>
+        <h2>De la primera prueba a un plan de mejora</h2>
+      </div>
+      <div class="steps">
+        <article><b>01</b><h3>Diagnóstico</h3><p>Responde una prueba inicial para estimar tu nivel por área.</p></article>
+        <article><b>02</b><h3>Simulacro</h3><p>Practica con preguntas organizadas por área y dificultad.</p></article>
+        <article><b>03</b><h3>Analiza</h3><p>Identifica aciertos, errores y temas que necesitan refuerzo.</p></article>
+        <article><b>04</b><h3>Mejora</h3><p>Vuelve a practicar y compara tu progreso.</p></article>
+      </div>
+    </section>
+
+    <section id="diagnostico" class="view">
+      <div class="page-title">
+        <span class="eyebrow">PASO 1</span>
+        <h2>Diagnóstico inicial</h2>
+        <p>Una pequeña muestra para identificar un punto de partida.</p>
+      </div>
+      <div id="diagnosticApp" class="quiz-shell"></div>
+    </section>
+
+    <section id="simulacro" class="view">
+      <div class="page-title">
+        <span class="eyebrow">PASO 2</span>
+        <h2>Simulacro ICFES IA</h2>
+        <p>Selecciona un área y responde preguntas de práctica. Esta demo utiliza preguntas educativas de ejemplo.</p>
+      </div>
+      <div class="callout"><b>🎓 ¿Tienes un plan?</b> Los planes de pago están pensados para simulacros completos: 25 preguntas mezcladas de las cinco áreas, selección múltiple y análisis final. Son preguntas originales de práctica, no preguntas oficiales del ICFES. <button class="btn primary" onclick="startFullMock()">Iniciar simulacro completo</button></div>
+      <div class="area-grid">
+        <button class="area-card" data-area="Lectura Crítica"><span>📖</span><b>Lectura Crítica</b><small>Comprensión y análisis</small></button>
+        <button class="area-card" data-area="Matemáticas"><span>∑</span><b>Matemáticas</b><small>Interpretación y solución</small></button>
+        <button class="area-card" data-area="Sociales y Ciudadanas"><span>🌎</span><b>Sociales</b><small>Sociedad y ciudadanía</small></button>
+        <button class="area-card" data-area="Ciencias Naturales"><span>🔬</span><b>Ciencias</b><small>Fenómenos y evidencia</small></button>
+        <button class="area-card" data-area="Inglés"><span>EN</span><b>Inglés</b><small>Comprensión en contexto</small></button>
+      </div>
+      <div id="quizApp" class="quiz-shell hidden"></div>
+    </section>
+
+    <section id="resultados" class="view">
+      <div class="page-title">
+        <span class="eyebrow">PASO 3</span>
+        <h2>Mis resultados</h2>
+        <p>Un resumen sencillo para visualizar el progreso.</p>
+      </div>
+      <div class="results-layout">
+        <div class="score-card">
+          <span>Puntaje de práctica</span>
+          <strong id="totalScore">0%</strong>
+          <div class="progress"><i id="totalBar"></i></div>
+          <p id="resultMessage">Realiza un diagnóstico o simulacro para generar resultados.</p>
+        </div>
+        <div class="areas-result" id="areasResult"></div>
+      </div>
+      <div class="recommendation" id="recommendation">
+        <span>🤖</span><div><b>Recomendación IA</b><p>Cuando completes una práctica, aquí aparecerá una recomendación basada en tus resultados.</p></div>
+      </div>
+    </section>
+
+
+    <section id="planes" class="view">
+      <div class="page-title">
+        <span class="eyebrow">MODELO DE PAGO</span>
+        <h2>Elige cómo quieres prepararte</h2>
+        <p>La plataforma conserva una opción gratuita y ofrece un plan semanal de $5.000 y un plan mensual de $15.000 para quienes quieran más simulacros, seguimiento y funciones de IA.</p>
+      </div>
+
+      <div class="plans-grid">
+        <article class="plan-card">
+          <div class="plan-icon">🌱</div>
+          <h3>Gratis</h3>
+          <p class="plan-price">$0 <small>/ siempre</small></p>
+          <p>Para comenzar a conocer tu nivel.</p>
+          <ul>
+            <li>✓ Diagnóstico inicial</li>
+            <li>✓ Simulacros limitados</li>
+            <li>✓ Resultados básicos</li>
+            <li>✓ Acceso desde celular</li>
+          </ul>
+          <button class="btn secondary" onclick="showView('diagnostico')">Comenzar gratis</button>
+        </article>
+
+        <article class="plan-card featured">
+          <span class="popular">POR SEMANA</span>
+          <div class="plan-icon">⚡</div>
+          <h3>Plan semanal</h3>
+          <p class="plan-price">$5.000 <small>/ semana</small></p>
+          <p>Acceso a simulacros completos con formato tipo Saber 11.</p>
+          <ul>
+            <li>✓ Simulacro completo tipo ICFES</li>
+            <li>✓ Resultados detallados</li>
+            <li>✓ Seguimiento del progreso</li>
+            <li>✓ Recomendaciones de estudio</li>
+          </ul>
+          <button class="btn primary" onclick="openPayment('Plan semanal','$5.000')">Elegir plan semanal</button>
+        </article>
+
+        <article class="plan-card">
+          <div class="plan-icon">🏆</div>
+          <h3>Plan mensual</h3>
+          <p class="plan-price">$15.000 <small>/ mes</small></p>
+          <p>Preparación continua con simulacros completos y seguimiento.</p>
+          <ul>
+            <li>✓ Simulacros completos tipo ICFES</li>
+            <li>✓ Seguimiento avanzado</li>
+            <li>✓ Recomendaciones IA</li>
+            <li>✓ Análisis por áreas</li>
+          </ul>
+          <button class="btn primary" onclick="openPayment('Plan mensual','$15.000')">Elegir plan mensual</button>
+        </article>
+      </div>
+
+      <div class="payment-info">
+        <div>
+          <span class="eyebrow">PAGO SEGURO · DEMOSTRACIÓN</span>
+          <h3>¿Cómo funcionaría el pago?</h3>
+          <p>En la versión real, el botón enviaría al estudiante a una pasarela de pago autorizada. Para la presentación escolar, el formulario es una simulación y <b>no realiza cobros reales</b>.</p>
+        </div>
+        <div class="payment-methods">
+          <span>📱 Nequi</span><span>📲 Daviplata</span>
+        </div>
+      </div>
+
+      <div id="paymentModal" class="modal hidden">
+        <div class="modal-box">
+          <button class="modal-close" onclick="closePayment()">×</button>
+          <span class="eyebrow">FINALIZAR COMPRA</span>
+          <h3 id="payTitle">Plan Básico</h3>
+          <p id="payPrice" class="pay-total">$5.000 / mes</p>
+          <div class="payment-tabs">
+            <button class="pay-tab active" data-method="Nequi">📱 Nequi</button>
+            <button class="pay-tab" data-method="Daviplata">📲 Daviplata</button>
+          </div>
+          <form id="paymentForm">
+            <label>Nombre completo<input required placeholder="Tu nombre"></label>
+            <label>Correo electrónico<input type="email" required placeholder="correo@ejemplo.com"></label>
+            <div class="recipient-box"><span>Los pagos se reciben en</span><strong>311 551 1990</strong></div>
+            <label id="paymentFieldLabel">Número de celular<input id="paymentField" required placeholder="300 000 0000"></label>
+            <button class="btn primary full" type="submit">Continuar con el pago →</button>
+          </form>
+          <small class="payment-note">Demo académica: el número receptor mostrado es 311 551 1990. No se realiza ningún cobro real desde esta página.</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyecto" class="view">
+      <div class="page-title">
+        <span class="eyebrow">PROYECTO DE GRADO</span>
+        <h2>Simulacro ICFES IA</h2>
+        <p>Propuesta, pertinencia, investigación bibliográfica y desarrollo de la solución.</p>
+      </div>
+
+      <div class="project-nav">
+        <button class="project-tab active" data-tab="justificacion">Justificación</button>
+        <button class="project-tab" data-tab="problema">Problema</button>
+        <button class="project-tab" data-tab="objetivos">Objetivos</button>
+        <button class="project-tab" data-tab="metodologia">Metodología</button>
+        <button class="project-tab" data-tab="tecnologia">Tecnología e IA</button>
+        <button class="project-tab" data-tab="bibliografia">Bibliografía</button>
+      </div>
+
+      <div class="project-content">
+        <article class="project-panel active" id="tab-justificacion">
+          <h3>1. Justificación y pertinencia</h3>
+          <p><b>Flujo planteado:</b> crear cuenta → diagnóstico → recibir resultados → practicar por nivel → analizar errores → mejorar → elegir un plan si necesita más funciones.</p>
+          <p>El examen Saber 11° es una evaluación estandarizada que incluye Lectura Crítica, Matemáticas, Sociales y Ciudadanas, Ciencias Naturales e Inglés. El ICFES publica guías y materiales gratuitos para familiarizarse con la estructura y las competencias evaluadas. citeturn0search4turn0search6</p>
+          <p>La propuesta busca complementar esos recursos mediante una plataforma sencilla que permita realizar un diagnóstico, practicar y recibir retroalimentación organizada. Su pertinencia se relaciona con la necesidad de convertir la práctica en un proceso continuo: diagnosticar → practicar → analizar → mejorar.</p>
+          <div class="callout">💡 <b>Valor diferencial:</b> no pretende reemplazar los materiales oficiales del ICFES; propone una experiencia de práctica y seguimiento que los organiza alrededor del progreso del estudiante.</div>
+        </article>
+
+        <article class="project-panel" id="tab-problema">
+          <h3>2. Problema de investigación</h3>
+          <p>Los estudiantes que desean prepararse para Saber 11 pueden encontrar dificultades para organizar su práctica, conocer sus áreas de oportunidad y hacer seguimiento de sus resultados. Aunque el ICFES dispone de herramientas gratuitas, el reto del proyecto es diseñar una experiencia que reúna diagnóstico, práctica y seguimiento en una interfaz accesible.</p>
+          <h4>Pregunta orientadora</h4>
+          <p class="question">¿Cómo diseñar y desarrollar una plataforma web con apoyo de IA que permita a estudiantes practicar para Saber 11, identificar necesidades de refuerzo y visualizar su progreso?</p>
+        </article>
+
+        <article class="project-panel" id="tab-objetivos">
+          <h3>3. Objetivos</h3>
+          <h4>Objetivo general</h4>
+          <p>Desarrollar una plataforma web educativa que apoye la preparación para Saber 11 mediante diagnóstico, simulacros, retroalimentación y seguimiento del progreso.</p>
+          <h4>Objetivos específicos</h4>
+          <ul>
+            <li>Diseñar una interfaz clara y adaptable a celulares y computadores.</li>
+            <li>Implementar un diagnóstico inicial por áreas.</li>
+            <li>Crear simulacros de práctica organizados por competencia y dificultad.</li>
+            <li>Mostrar resultados mediante indicadores comprensibles.</li>
+            <li>Incorporar recomendaciones automáticas de estudio como apoyo.</li>
+            <li>Documentar las fuentes y criterios usados para construir el contenido.</li>
+          </ul>
+        </article>
+
+        <article class="project-panel" id="tab-metodologia">
+          <h3>4. Metodología y desarrollo</h3>
+          <div class="timeline">
+            <div><b>Fase 1</b><span>Investigación bibliográfica y revisión de la estructura de Saber 11.</span></div>
+            <div><b>Fase 2</b><span>Definición de requisitos, usuarios, áreas y flujo de navegación.</span></div>
+            <div><b>Fase 3</b><span>Diseño de interfaz y arquitectura de la aplicación.</span></div>
+            <div><b>Fase 4</b><span>Programación de diagnóstico, simulacros, resultados y almacenamiento local.</span></div>
+            <div><b>Fase 5</b><span>Pruebas de usabilidad, corrección de errores y validación del contenido.</span></div>
+            <div><b>Fase 6</b><span>Evaluación del prototipo y propuesta de integración de IA en una versión posterior.</span></div>
+          </div>
+          <h4>Indicadores de evaluación del prototipo</h4>
+          <p>Finalización de simulacros, claridad de resultados, tiempo de navegación, facilidad de uso en celular y utilidad percibida de las recomendaciones.</p>
+        </article>
+
+        <article class="project-panel" id="tab-tecnologia">
+          <h3>5. Tecnología e Inteligencia Artificial</h3>
+          <p>El prototipo está construido con HTML, CSS y JavaScript, sin depender de un servidor para la demostración. Los resultados se guardan localmente en el navegador para facilitar una presentación escolar.</p>
+          <p>En una versión completa, la IA podría utilizarse para clasificar errores, recomendar temas de refuerzo y generar retroalimentación explicativa. UNESCO recomienda un enfoque centrado en las personas, con atención a privacidad, uso ético, validación pedagógica y protección de datos. citeturn0search12</p>
+          <div class="callout warning">⚠️ <b>Importante:</b> las preguntas de esta demo son de ejemplo y no deben presentarse como preguntas oficiales del ICFES. Para una versión productiva, el banco de preguntas debe construirse con criterios pedagógicos y fuentes autorizadas.</div>
+        </article>
+
+        <article class="project-panel" id="tab-bibliografia">
+          <h3>6. Bibliografía y fuentes consultadas</h3>
+          <ol class="refs">
+            <li>Instituto Colombiano para la Evaluación de la Educación (ICFES). <i>Saber 11°.</i> Información oficial sobre estructura y pruebas. 2025–2026.</li>
+            <li>ICFES. <i>Guía de orientación examen Saber 11°.</i> Actualizada en marzo de 2026.</li>
+            <li>ICFES. <i>Familiarízate con el Saber / Caja de Herramientas Saber 11°.</i> Material de práctica y ejemplos.</li>
+            <li>ICFES. <i>Marcos de referencia de las pruebas Saber 11°.</i> Documentos técnicos y metodológicos.</li>
+            <li>UNESCO, Miao, F. & Holmes, W. (2023). <i>Guía para el uso de IA generativa en educación e investigación.</i> Actualizada en 2026.</li>
+          </ol>
+          <div class="source-links">
+            <a href="https://www.icfes.gov.co/evaluaciones-icfes/saber-11/" target="_blank">ICFES · Saber 11° ↗</a>
+            <a href="https://www.icfes.gov.co/evaluaciones-icfes/saber-11/guia-de-orientacion-examen-saber-11/" target="_blank">ICFES · Guía de orientación ↗</a>
+            <a href="https://www.icfes.gov.co/abc-del-saber/familiarizate-con-el-saber/" target="_blank">ICFES · Familiarízate ↗</a>
+            <a href="https://www.icfes.gov.co/publicaciones-icfes/documentos-tecnicos-y-metodologicos/marcos-de-referencia/" target="_blank">ICFES · Marcos de referencia ↗</a>
+            <a href="https://www.unesco.org/es/articles/guia-para-el-uso-de-ia-generativa-en-educacion-e-investigacion" target="_blank">UNESCO · IA en educación ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><b>SIMULACROS ICFES IA</b><span>Proyecto de grado · Prototipo educativo</span></div>
+    <span>Práctica hoy. Conoce tu nivel. Mejora para el ICFES.</span>
+  </footer>
+  <script>
+const questions = [
+  {area:"Lectura Crítica", q:"Un texto sostiene que la tecnología puede facilitar el aprendizaje, pero advierte que su utilidad depende de cómo se use. ¿Cuál es la idea central?", o:["Toda tecnología mejora el aprendizaje","La tecnología puede ser útil si se utiliza de manera adecuada","La tecnología debe eliminarse de las aulas","Aprender solo es posible con tecnología"], a:1},
+  {area:"Lectura Crítica", q:"Una autora presenta una opinión y después aporta dos datos para respaldarla. ¿Qué función cumplen principalmente esos datos?", o:["Decorar el texto","Contradecir el título","Sustentar la opinión","Cambiar de tema"], a:2},
+  {area:"Lectura Crítica", q:"Si un texto compara dos posiciones sobre el mismo problema, ¿qué estrategia ayuda más a comprenderlo?", o:["Identificar las razones de cada posición","Leer solamente la última oración","Ignorar los argumentos","Escoger automáticamente la primera posición"], a:0},
+  {area:"Lectura Crítica", q:"Un artículo afirma: 'El parque recibió más visitantes después de ampliar su horario'. ¿Qué información sería más útil para evaluar esa afirmación?", o:["El color de las paredes","La cantidad de visitantes antes y después del cambio","El nombre del arquitecto","La longitud del artículo"], a:1},
+  {area:"Lectura Crítica", q:"¿Cuál de las siguientes opciones expresa una conclusión y no un dato?", o:["La biblioteca abre a las 8 a. m.","El informe tiene cinco páginas","Por estos resultados, conviene aumentar la frecuencia de lectura","El estudio se realizó durante tres meses"], a:2},
+
+  {area:"Matemáticas", q:"Una camiseta cuesta $40.000 y tiene un descuento del 25 %. ¿Cuál es su precio final?", o:["$10.000","$25.000","$30.000","$35.000"], a:2},
+  {area:"Matemáticas", q:"Si 3 cuadernos cuestan $12.000 y todos tienen el mismo precio, ¿cuánto cuestan 5 cuadernos?", o:["$15.000","$18.000","$20.000","$24.000"], a:2},
+  {area:"Matemáticas", q:"Un rectángulo mide 8 cm de largo y 5 cm de ancho. ¿Cuál es su área?", o:["13 cm²","26 cm²","40 cm²","80 cm²"], a:2},
+  {area:"Matemáticas", q:"Una cantidad pasa de 60 a 72. ¿En qué porcentaje aumentó?", o:["12%","15%","20%","25%"], a:2},
+  {area:"Matemáticas", q:"Si x + 7 = 19, ¿cuál es el valor de x?", o:["10","11","12","13"], a:2},
+  {area:"Matemáticas", q:"En una bolsa hay 3 fichas rojas y 2 azules. Si se toma una al azar, ¿cuál es la probabilidad de obtener una roja?", o:["2/5","3/5","1/2","3/2"], a:1},
+
+  {area:"Sociales y Ciudadanas", q:"¿Cuál es una característica de la participación ciudadana?", o:["Permite intervenir en asuntos de interés colectivo","Impide la existencia de opiniones diferentes","Elimina las normas","Solo ocurre durante elecciones"], a:0},
+  {area:"Sociales y Ciudadanas", q:"Una comunidad propone varias soluciones para un problema ambiental y luego las debate. ¿Qué práctica se evidencia?", o:["Participación deliberativa","Aislamiento social","Censura","Competencia comercial"], a:0},
+  {area:"Sociales y Ciudadanas", q:"¿Por qué es importante separar las funciones de las instituciones del Estado?", o:["Para evitar la concentración del poder","Para eliminar las leyes","Para impedir la participación","Para que una sola institución tome todas las decisiones"], a:0},
+  {area:"Sociales y Ciudadanas", q:"Si una persona presenta argumentos diferentes a los de la mayoría durante un debate, ¿qué principio se relaciona con su participación?", o:["Pluralismo","Censura","Exclusión","Uniformidad"], a:0},
+  {area:"Sociales y Ciudadanas", q:"Una noticia presenta cifras sobre desempleo y cita la fuente de los datos. ¿Qué permite principalmente la cita de la fuente?", o:["Verificar de dónde proviene la información","Garantizar que todos estén de acuerdo","Eliminar la necesidad de analizar los datos","Convertir una opinión en una ley"], a:0},
+
+  {area:"Ciencias Naturales", q:"Un grupo quiere saber si la cantidad de luz afecta el crecimiento de una planta. ¿Qué variable deberían modificar?", o:["La cantidad de luz","El tipo de pregunta","El nombre de la planta","El resultado esperado"], a:0},
+  {area:"Ciencias Naturales", q:"¿Cuál es una función principal del sistema respiratorio?", o:["Transportar impulsos nerviosos","Intercambiar gases con el ambiente","Producir movimientos voluntarios","Filtrar información visual"], a:1},
+  {area:"Ciencias Naturales", q:"Cuando el agua líquida se convierte en vapor por efecto del calor, ocurre un cambio de estado llamado:", o:["Condensación","Solidificación","Evaporación","Fusión"], a:2},
+  {area:"Ciencias Naturales", q:"En una cadena alimentaria, las plantas suelen cumplir el papel de:", o:["Productores","Consumidores secundarios","Descomponedores","Depredadores"], a:0},
+  {area:"Ciencias Naturales", q:"Si un objeto se mueve cada vez más rápido, ¿qué está cambiando principalmente?", o:["Su masa","Su velocidad","Su color","Su volumen"], a:1},
+
+  {area:"Inglés", q:"Choose the best option: “They ___ football on Saturdays.”", o:["plays","play","playing","played"], a:1},
+  {area:"Inglés", q:"Choose the best option: “I am tired because I ___ all morning.”", o:["study","studied","have been studying","studies"], a:2},
+  {area:"Inglés", q:"What does “borrow” mean in the sentence: “Can I borrow your pencil?”", o:["Give something away","Use something temporarily and return it","Break something","Buy something"], a:1},
+  {area:"Inglés", q:"Choose the correct question: ___ you like music?", o:["Do","Does","Are","Is"], a:0},
+  {area:"Inglés", q:"Complete: “There ___ two books on the table.”", o:["is","are","am","be"], a:1}
+];
+
+let currentQuiz = [], currentIndex = 0, selected = null, correct = 0;
+let scores = JSON.parse(localStorage.getItem("icfesScores") || "{}");
+const DAILY_LIMIT = 20;
+const DAILY_KEY = "icfesDailyUsage";
+
+function getDailyUsage(){
+  const today = new Date().toISOString().slice(0,10);
+  const saved = JSON.parse(localStorage.getItem(DAILY_KEY) || "{}");
+  if(saved.date !== today) return {date:today, used:0};
+  return saved;
+}
+function saveDailyUsage(used){
+  localStorage.setItem(DAILY_KEY, JSON.stringify({
+    date:new Date().toISOString().slice(0,10),
+    used:Math.min(DAILY_LIMIT, used)
+  }));
+}
+function remainingDailyQuestions(){
+  return Math.max(0, DAILY_LIMIT - getDailyUsage().used);
+}
+function updateDailyNotice(){
+  const el=document.getElementById("dailyNotice");
+  if(!el) return;
+  const remaining=remainingDailyQuestions();
+  if(remaining===0){
+    el.innerHTML='<b>🔒 Has completado tus 20 preguntas gratis de hoy.</b><br>Vuelve mañana o elige un plan para continuar practicando.';
+    el.classList.add("limit-reached");
+  } else if(remaining<=5){
+    el.innerHTML=`<b>⚡ Te quedan ${remaining} preguntas gratis hoy.</b> ¡Aprovecha para seguir practicando!`;
+    el.classList.remove("limit-reached");
+  } else {
+    el.innerHTML=`<b>🎯 Preguntas gratis hoy: ${remaining} de ${DAILY_LIMIT}</b><br>Las preguntas se renuevan cada día.`;
+    el.classList.remove("limit-reached");
+  }
+}
+
+
+const views = [...document.querySelectorAll(".view")];
+const nav = document.getElementById("nav");
+document.getElementById("menuBtn").onclick = () => nav.classList.toggle("open");
+
+function showView(id){
+  views.forEach(v => v.classList.toggle("active", v.id === id));
+  document.querySelectorAll("[data-view]").forEach(a => a.classList.toggle("active", a.dataset.view === id));
+  nav.classList.remove("open");
+  window.scrollTo({top:0, behavior:"smooth"});
+  if(id==="resultados") renderResults();
+}
+document.querySelectorAll("[data-view]").forEach(el => el.addEventListener("click", e=>{
+  e.preventDefault(); showView(el.dataset.view);
+}));
+window.addEventListener("hashchange",()=>showView(location.hash.replace("#","")||"inicio"));
+
+function shuffleQuestions(list){
+  return [...list].sort(() => Math.random() - 0.5);
+}
+function renderQuiz(container, list, title, areaKey){
+  currentQuiz=shuffleQuestions(list); currentIndex=0; correct=0; selected=null;
+  container.classList.remove("hidden");
+  container.innerHTML = `<div class="quiz-top"><b>${title}</b><span id="counter">1 / ${list.length}</span></div><div id="questionBox"></div><div class="quiz-actions"><button class="btn primary" id="nextBtn">Continuar →</button></div>`;
+  drawQuestion(container, areaKey);
+}
+function drawQuestion(container, areaKey){
+  const item=currentQuiz[currentIndex];
+  selected=null;
+  const box=container.querySelector("#questionBox");
+  box.innerHTML=`<div class="question">${item.q}</div><div>${item.o.map((x,i)=>`<button class="option" data-i="${i}">${String.fromCharCode(65+i)}. ${x}</button>`).join("")}</div>`;
+  container.querySelector("#counter").textContent=`${currentIndex+1} / ${currentQuiz.length}`;
+  box.querySelectorAll(".option").forEach(b=>b.onclick=()=>{box.querySelectorAll(".option").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");selected=+b.dataset.i});
+  container.querySelector("#nextBtn").onclick=()=>{
+    if(selected===null) return;
+    if(selected===item.a) correct++;
+    if(areaKey==="Práctica gratuita"){
+      saveDailyUsage(getDailyUsage().used + 1);
+    }
+    currentIndex++;
+    if(currentIndex<currentQuiz.length) drawQuestion(container,areaKey);
+    else finishQuiz(areaKey);
+  };
+}
+function finishQuiz(area){
+  const pct=Math.round(correct/currentQuiz.length*100);
+  scores[area]=pct;
+  localStorage.setItem("icfesScores",JSON.stringify(scores));
+  const c=document.getElementById("quizApp").classList.contains("hidden")?document.getElementById("diagnosticApp"):document.getElementById("quizApp");
+  c.innerHTML=`<div class="score-card"><span>${area}</span><strong>${pct}%</strong><div class="progress"><i style="width:${pct}%"></i></div><p>Obtuviste ${correct} de ${currentQuiz.length} respuestas correctas. Revisa tus resultados para ver la recomendación.</p><button class="btn primary" onclick="showView('resultados')">Ver resultados →</button></div>`;
+  document.getElementById("heroLevel").textContent=pct>=80?"Avanzado":pct>=60?"Intermedio":"Inicial";
+  updateDailyNotice();
+}
+document.querySelectorAll(".area-card").forEach(btn=>btn.onclick=()=>{
+  const area=btn.dataset.area;
+  const list=questions.filter(q=>q.area===area);
+  renderQuiz(document.getElementById("quizApp"),list,`Simulacro · ${area}`,area);
+  document.getElementById("quizApp").scrollIntoView({behavior:"smooth",block:"start"});
+});
+
+document.getElementById("diagnosticApp").innerHTML=`<div class="quiz-top"><b>Práctica gratuita del día</b><span>Hasta 20 preguntas</span></div><div id="dailyNotice" class="daily-notice"></div><p>Responde preguntas de diferentes áreas. Las preguntas cambian y tu límite gratuito se renueva cada día.</p><button class="btn primary" id="startDiag">Comenzar práctica →</button>`;
+updateDailyNotice();
+function paidAccess(){ return localStorage.getItem("icfesPaidDemo") === "true"; }
+function startFullMock(){
+  if(!paidAccess()){ showView("planes"); alert("En esta versión escolar, primero activa un plan de demostración desde Planes. No se realiza ningún cobro real."); return; }
+  const list=shuffleQuestions(questions).slice(0,25);
+  renderFullMock(list);
+}
+function renderFullMock(list){
+  const c=document.getElementById("quizApp"); c.classList.remove("hidden");
+  let idx=0, hits=0, answers=[]; const start=Date.now();
+  const draw=()=>{ const q=list[idx]; c.innerHTML=`<div class="quiz-top"><b>Simulacro completo · Tipo Saber 11</b><span>${idx+1} / ${list.length}</span></div><div class="daily-notice"><b>⏱️ Simulacro de práctica</b><br>Responde una pregunta a la vez y revisa tu desempeño al finalizar.</div><div class="question"><b>${q.area}</b><br>${q.q}</div><div>${q.o.map((x,i)=>`<button class="option" data-i="${i}">${String.fromCharCode(65+i)}. ${x}</button>`).join("")}</div><div class="quiz-actions"><button class="btn primary" id="fullNext">${idx===list.length-1?'Finalizar simulacro':'Continuar →'}</button></div>`; let sel=null; c.querySelectorAll('.option').forEach(b=>b.onclick=()=>{c.querySelectorAll('.option').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');sel=+b.dataset.i}); c.querySelector('#fullNext').onclick=()=>{if(sel===null)return; if(sel===q.a)hits++; answers.push(sel); idx++; if(idx<list.length)draw(); else {const pct=Math.round(hits/list.length*100); scores['Simulacro completo']=pct; localStorage.setItem('icfesScores',JSON.stringify(scores)); c.innerHTML=`<div class="score-card"><span>Simulacro completo · Tipo Saber 11</span><strong>${pct}%</strong><div class="progress"><i style="width:${pct}%"></i></div><p>Resultado de práctica: ${hits} de ${list.length} respuestas correctas.</p><button class="btn primary" onclick="showView('resultados')">Ver análisis →</button></div>`;}};}; draw(); c.scrollIntoView({behavior:'smooth',block:'start'}); }
+
+document.getElementById("startDiag").onclick=()=>{
+  const remaining=remainingDailyQuestions();
+  if(remaining<=0){
+    updateDailyNotice();
+    return;
+  }
+  const count=Math.min(20, remaining);
+  const diagnosticQuestions = shuffleQuestions(questions).slice(0,count);
+  renderQuiz(document.getElementById("diagnosticApp"),diagnosticQuestions,"Práctica gratuita · Hoy","Práctica gratuita");
+};
+
+function renderResults(){
+  const vals=Object.values(scores);
+  const total=vals.length?Math.round(vals.reduce((a,b)=>a+b,0)/vals.length):0;
+  document.getElementById("totalScore").textContent=total+"%";
+  document.getElementById("totalBar").style.width=total+"%";
+  document.getElementById("resultMessage").textContent=vals.length?`Has realizado ${vals.length} área(s). Sigue practicando para comparar tu progreso.`:"Aún no hay resultados guardados.";
+  const ar=document.getElementById("areasResult");
+  ar.innerHTML=["Lectura Crítica","Matemáticas","Sociales y Ciudadanas","Ciencias Naturales","Inglés"].map(a=>{
+    const p=scores[a] ?? 0;
+    return `<div class="area-result"><div class="area-result-head"><span>${a}</span><span>${scores[a]===undefined?"—":p+"%"}</span></div><div class="area-bar"><i style="width:${p}%"></i></div></div>`;
+  }).join("");
+  const rec= total<60 ? "Prioriza conceptos básicos y practica con sesiones cortas y frecuentes." : total<80 ? "Combina práctica con revisión de errores: vuelve a resolver las preguntas que fallaste." : "Mantén la práctica y aumenta gradualmente la dificultad. Explica por qué cada respuesta es correcta.";
+  document.getElementById("recommendation").innerHTML=`<span>🤖</span><div><b>Recomendación de estudio</b><p>${rec}</p></div>`;
+}
+
+document.querySelectorAll(".project-tab").forEach(btn=>btn.onclick=()=>{
+  document.querySelectorAll(".project-tab").forEach(x=>x.classList.remove("active"));
+  document.querySelectorAll(".project-panel").forEach(x=>x.classList.remove("active"));
+  btn.classList.add("active");
+  document.getElementById("tab-"+btn.dataset.tab).classList.add("active");
+});
+
+showView(location.hash.replace("#","")||"inicio");
+
+function openPayment(plan, price){
+  document.getElementById("paymentModal").classList.remove("hidden");
+  document.getElementById("payTitle").textContent="Plan "+plan;
+  document.getElementById("payPrice").textContent=price+" / mes";
+  document.body.style.overflow="hidden";
+}
+function closePayment(){
+  document.getElementById("paymentModal").classList.add("hidden");
+  document.body.style.overflow="";
+}
+document.querySelectorAll(".pay-tab").forEach(tab=>tab.addEventListener("click",()=>{
+  document.querySelectorAll(".pay-tab").forEach(t=>t.classList.remove("active"));
+  tab.classList.add("active");
+  const method=tab.dataset.method;
+  const label=document.getElementById("paymentFieldLabel");
+  const field=document.getElementById("paymentField");
+  label.childNodes[0].textContent="Número de celular";
+  field.placeholder=method==="Nequi"?"Número de celular Nequi":"Número de celular Daviplata";
+}));
+document.getElementById("paymentForm")?.addEventListener("submit",e=>{
+  e.preventDefault();
+  alert("Demo: el pago se realizaría por Nequi o Daviplata al número 311 551 1990. Esta página no realiza cobros reales.");
+  closePayment();
+});
+
+</script>
+</body>
+</html>
